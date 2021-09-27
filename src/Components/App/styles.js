@@ -44,19 +44,28 @@ button{
     border: none;
     -webkit-tap-highlight-color: transparent;
 }
+#root{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 `
 
 
 const App = styled.div(({ $theme }) => {
-    console.log(theme, $theme)
     return css`
     --primary1: ${theme[$theme].primary1};
     --primary2: ${theme[$theme].primary2};
     --secondary: ${theme[$theme].secondary};
     --accent: ${theme[$theme].accent};
-    height: 100vh;
+    width: 375px;
+    height: 812px;
     background-color: var(--primary1);
     transition: 0.2s;
+    padding: 10px;
+    display:flex;
+    flex-direction:column;
     `
 })
 const Styled = {
