@@ -4,11 +4,17 @@ import Styled from './styles';
 const Buttons = (props) => {
     return (
         <Styled.ButtonsArea>
-            <Styled.Button $theme={props.$theme} deleting>AC</Styled.Button>
-            <Styled.Button $theme={props.$theme} deleting>DEL</Styled.Button>
-            <Styled.Button $theme={props.$theme} operations>%</Styled.Button>
+            <Styled.Button $theme={props.$theme} deleting
+                onClick={props.allClear}
+            >AC</Styled.Button>
+            <Styled.Button $theme={props.$theme} deleting
+                onClick={props.del}
+            >DEL</Styled.Button>
+            <Styled.Button $theme={props.$theme} operations
+            onClick={props.percent}
+            >%</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'/'} operations
-                //onClick={}
+                onClick={props.setPreviousValue}
             >&#247;</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'7'}
                 onClick={props.setCurrentValue}
@@ -20,7 +26,7 @@ const Buttons = (props) => {
                 onClick={props.setCurrentValue}
             >9</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'*'} operations
-                //onClick={}
+                onClick={props.setPreviousValue}
             >&#xD7;</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'4'}
                 onClick={props.setCurrentValue}
@@ -32,7 +38,7 @@ const Buttons = (props) => {
                 onClick={props.setCurrentValue}
             >6</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'-'} operations
-                //onClick={}
+                onClick={props.setPreviousValue}
             >-</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'1'}
                 onClick={props.setCurrentValue}
@@ -44,10 +50,10 @@ const Buttons = (props) => {
                 onClick={props.setCurrentValue}
             >3</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'+'} operations
-                //onClick={}
+                onClick={props.setPreviousValue}
             >+</Styled.Button>
             <Styled.Button $theme={props.$theme}
-                onClick={props.setCurrentValue}
+                onClick={props.invertValue}
             >±</Styled.Button>
             <Styled.Button $theme={props.$theme} data={'0'}
                 onClick={props.setCurrentValue}
@@ -55,7 +61,9 @@ const Buttons = (props) => {
             <Styled.Button $theme={props.$theme} data={'.'}
                 onClick={props.setCurrentValue}
             >.</Styled.Button>
-            <Styled.Button $theme={props.$theme} operations>=</Styled.Button>
+            <Styled.Button $theme={props.$theme} operations
+                onClick={props.equal}
+            >=</Styled.Button>
         </Styled.ButtonsArea>
     )
 }

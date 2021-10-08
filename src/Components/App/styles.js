@@ -66,6 +66,7 @@ const App = styled.div(({ $theme }) => {
     padding: 10px;
     display:flex;
     flex-direction:column;
+    border-radius: 25px;
     `
 })
 const Styled = {

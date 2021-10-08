@@ -21,12 +21,10 @@ const Header = (props) => {
     //     })
     // }
 
-
-
     return (
         <Styled.Header>
             <Styled.MenuButton>
-                <Styled.MenuButtonIcon src={icon} />
+                <Styled.MenuButtonIcon src={ icon } />
             </Styled.MenuButton>
 
             <Styled.Tabs>
